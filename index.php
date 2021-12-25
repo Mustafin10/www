@@ -19,5 +19,11 @@
         <li><a href="lab-2-8.php">Task 1-13</a></li>
         <li><a href="lab-2-9.php">Task 1-14</a></li>
         <li><a href="lab-2-10.php">Task 1-15</a></li>
-        <li><a href="lab-2-11.php">Task 1-16</a></li>  
+        <li><a href="lab-2-11.php">Task 1-16</a></li>
+	<li><a href="lab-2-12.php">Task 2-1</a></li>
+        <li><a href="lab-2-13.php">Task 2-2</a></li>
+        <li><a href="lab-2-14.php">Task 2-3</a></li>
+        <li><a href="lab-2-15.php">Task 2-4</a></li>
+        <li><a href="lab-2-16.php">Task 2-5</a></li> 
+	<li><a href="lab-2-17.php">Task 2-6</a></li> 
 </ul>
