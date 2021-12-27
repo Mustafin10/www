@@ -1,5 +1,11 @@
-<title> Mustafin Daniil PI-322</title>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Мустафин Даннил ПИ-322</title>
+</HEAD>
+<BODY>
 <?
+header('Content-Type: text/html; charset=utf-8');
 $text1 = $_POST["text1"];
 $text2 = $_POST["text2"];
 $text3 = $_POST["text3"];
@@ -14,10 +20,14 @@ $rev = "";
 $t1 = array();
 $t2 = array();
 $t3 = array();
-
+$o1 = 0;
+$o2 = 0;
+$o3 = 0;
+$o4 = "";
+$o5="";
 if (isset($_POST["text1"])) {
 
-  echo '<h3> Variant 13 </h3>';
+  echo '<h3> Вариант 13 </h3>';
   echo $text1;
   echo '<br>';
   $t1 = preg_split('//u', $text1, -1, PREG_SPLIT_NO_EMPTY);
@@ -25,28 +35,40 @@ if (isset($_POST["text1"])) {
     if ($sym1 == $z) { $s1c++; }
     if ($sym2 == $z) { $s2c++; }
   }
-  echo ('Symbol "' . $sym1 . '" occur ' . $s1c . ' раз <br>');
-  echo ('Symbol "' . $sym2 . '" occur ' . $s2c . ' раз');
+  echo ('Символ "' . $sym1 . '" встречается ' . $s1c . ' раз <br>');
+  echo ('Символ "' . $sym2 . '" встречается ' . $s2c . ' раз');
 
-  echo '<h3> Variant 3 </h3>';
+  echo '<h3> Вариант 21 </h3>';
   echo $text2;
   echo '<br>';
-  $t2 = explode (' ', $text2);
-  foreach ($t2 as $str) {
-    if (mb_substr($str, 0, 1,"utf-8") == $let) { $letc++; }
+  $strArr = preg_split('//u', $text2, null, PREG_SPLIT_NO_EMPTY);
+  $o2 = count($strArr)+1;
+  for($i=0; $i<=$o2; $i++){
+	  if($o3>2){
+		  $o4 = $o4 . "е";
+		  $o3=0;
+	  }
+	  $o4 = $o4 . $strArr[$i];
+	  $o3++;
   }
-  echo ('Number of words starting with a letter ' . $let . ': ' . $letc . '<br>');
+  echo $o4;
 
-  echo '<h3> Variant 16 </h3>';
+  echo '<h3> Вариант 17 </h3>';
   echo $text3;
   echo '<br>';
-  $t3 = explode (' ', $text3);
-  $rev = array_reverse($t3);
-  echo ('Reverse word order string: ');
-  foreach ($rev as $z1) {
-    echo ($z1 . ' ');
-  }
-
+  if(is_numeric($text3)){
+	$o1 = (float) $text3;
+	$o1 = $o1 - floor($o1);
+	if($o1 != 0){
+		echo ('2 <br>');
+	}else{
+		echo ('1 <br>');
+	}
+	}else{
+	  echo ('0 <br>');
+	}
 }
 
 ?>
+</BODY> 
+</HTML>
