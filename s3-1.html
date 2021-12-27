@@ -1,9 +1,12 @@
-<HEAD>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-</HEAD>
-<FORM  method="post" action="s3_1.php">
- <P> Enter two numbers<BR> 
-  а: <INPUT type="text" name="a" size="3"> 
-  b: <INPUT type="text" name="b" size="3">  
-  <P> <INPUT type="submit" value="Find the greatest of two"> 
-</FORM>
+<title> Мустафин Даниил ПИ-322</title>
+<?
+ $a=$_POST["a"];
+ $b=$_POST["b"];
+  if ($a>=$b) {
+    if ($a==$b) { 
+      echo 'Числа равны';  
+   } else { echo ('Число a=' . $a); }
+  } else { echo ('Число b=' . $b); }
+
+echo ("<br> <a href='s3-1.html'> Вернуться назад </a>");
+?>
