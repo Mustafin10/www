@@ -1,19 +1,19 @@
-<title> Mustafin Daniil PI-322</title>
+<title> Мустафин Даниил ПИ-322</title>
 
 <body>
-<h3> Calculator </h3>
-<p>Enter numbers to the nearest hundredth 
+<h3> Калькулятор </h3>
+<p>Введите числа с точностью до сотой (0.01), дробную часть отделите точкой
 <form method="POST" action="<?php print $PHP_SELF ?>">
  <p>a=<INPUT type="number" step="0.01" name="a">
     b=<INPUT type="number" step="0.01" name="b">
  <br>
- <p>action:<SELECT NAME="z" SIZE="1">
-  <OPTION VALUE="1" SELECTED> add
-  <OPTION VALUE="2"> subtract
-  <OPTION VALUE="3"> multiply
-  <OPTION VALUE="4"> divide
+ <p>действие:<SELECT NAME="z" SIZE="1">
+  <OPTION VALUE="1" SELECTED> сложить
+  <OPTION VALUE="2"> вычесть
+  <OPTION VALUE="3"> умножить
+  <OPTION VALUE="4"> разделить
  </SELECT>
- <P> <INPUT type="submit" name="obr" value="Calculate">
+ <P> <INPUT type="submit" name="obr" value="Посчитать">
 </form>
 
 <?
